@@ -78,7 +78,7 @@ Your #1 Online Book Store. We sell life changing ebooks you can ever find. We of
             <Typography  className={classes.title2} variant="h5">Impactful Book</Typography>
             <Typography className={classes.content2}>You can download our ebooks at a go and learn anywhere</Typography>
           </CardContent>
-       <Link to="/ebooks"><Button className={classes.button} variant="contained" size="large" type="button">Start Now</Button></Link> 
+       <Link to="/ebooks"><Button className={classes.button} color="primary" variant="contained" size="large" type="button">Start Now</Button></Link> 
          </div>
 
          <div className= {classes.contain1} >
