@@ -73,7 +73,7 @@ export default makeStyles((theme) => ({
     background:"white",
     color:"#B1328E",
     fontWeight: "bold",
-    marginTop: 30,
+    marginTop: 60,
   },
     contain1:{
        width: "30%",
