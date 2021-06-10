@@ -28,7 +28,7 @@ function Content(match) {
 
    console.log(id)
 
-    const url = 'http://localhost:4000/posts';
+    const url = 'https://eminentbookserver.herokuapp.com/posts';
         // const id= '60781b17703dcc1e40db2192'
     // fetchPosts = () => axios.get(url);
       const fetchp = async (id)=>{

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MobileHeader from "./MobileHeader";
-import { makeStyles } from '@material-ui/core/styles';
+
+import useStyles from "./Headerstyles";
 
 
 function Header (){
@@ -55,17 +56,7 @@ function Hr (){
 
 
 
-const useStyles = makeStyles((theme) => ({
- 
-  [ theme.breakpoints.down("sm")]:{
-   image:{
-     width: "100%",
-     height:"100",
-     maxWidth: 600,
-     
- },
-  }
-}));
+
 
 
 
@@ -96,7 +87,7 @@ function handleMouseOver() {
             <div className="slide1">
             <h1>{props.title}</h1>
             <p>{props.detail}</p>
-             <Link  to='/ebooks'><button style={{background: mouseOver? "pink" : "white"}} onMouseOver ={handleMouseOver} onMouseOut = {handleMouseOut}  >{props.shop}</button></Link>  
+             <Link  to='/ebooks'><button  className={classes.shop} style={{background: mouseOver? "pink" : "white"}} onMouseOver ={handleMouseOver} onMouseOut = {handleMouseOut}  >{props.shop}</button></Link>  
             </div>
 
            
@@ -108,7 +99,7 @@ function handleMouseOver() {
             <div className="slide2">
             <h1>{props.title}</h1>
             <p>{props.detail}</p>
-             <Link  to='/ebooks'><button style={{background: mouseOver? "pink" : "white"}} onMouseOver ={handleMouseOver} onMouseOut = {handleMouseOut}  >{props.shop}</button></Link>  
+             <Link  to='/ebooks'><button className={classes.shop} style={{background: mouseOver? "pink" : "white"}} onMouseOver ={handleMouseOver} onMouseOut = {handleMouseOut}  >{props.shop}</button></Link>  
             </div>
 
            
