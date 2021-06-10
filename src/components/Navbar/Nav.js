@@ -155,27 +155,27 @@ export default function Nav() {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader}>
+        <div className={classes.drawerHeader} >
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
         <Divider />
-         <ul  >
+         <ul onClick={handleDrawerClose}  >
                
                 <Link to="/">
-                <li>Home</li>
+                <li  onClick={handleDrawerClose} >Home</li>
                 </Link>
 
                 <Link to="/ebooks">
-                <li>Ebooks</li>
+                <li  onClick={handleDrawerClose} >Ebooks</li>
                 </Link>
 
                 <Link to="/about">
-                <li>About Us</li>
+                <li onClick={handleDrawerClose} >About Us</li>
                 </Link>
                 <Link to="/contact">
-                <li>Contact Us</li>
+                <li onClick={handleDrawerClose} >Contact Us</li>
                 </Link>
 
                 

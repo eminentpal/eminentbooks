@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import books from "../../books";
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 import { findPost } from "../../actions/posts";
-import { Button, Card, CardMedia, Grid, Typography } from "@material-ui/core";
+import { Button, Card, Divider, CardMedia, Grid, Typography } from "@material-ui/core";
 import useStyles from "./contentStyles";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -23,16 +23,20 @@ function Content(match) {
     const [content, setContent] = useState(true)
 
    const classes = useStyles()
+  const history = useHistory()
+   const {id} = useParams()
 
-   
+   console.log(id)
+
     const url = 'http://localhost:4000/posts';
         // const id= '60781b17703dcc1e40db2192'
     // fetchPosts = () => axios.get(url);
       const fetchp = async (id)=>{
       
         //   setLoading(true)
+
 const {data} = await axios.get(`${url}/${id}`)
-           console.log(data)
+          //  console.log(data)
            setDetail(data)
       }
 
@@ -58,16 +62,26 @@ const {data} = await axios.get(`${url}/${id}`)
  
       
       useEffect(() =>{
-        const id= window.location.pathname.split("/")
-        fetchp(id[2]);
+        // const id= window.location.pathname.split("/")
+        // fetchp(id[2]);
 //   const new1 =  dispatch(findPost(id[2]))
- 
+fetchp(id)
        console.log(match)
-      }, [dispatch]); 
+      }, [id]); 
 
 
-      const post = useSelector(state => state.post)
+const {posts} = useSelector(state => state.posts)
 
+const recommended= posts?.filter(({_id}) => _id !== detail._id )
+
+const cut = 3
+const recommendedPosts = recommended?.slice(0, cut)
+console.log(recommendedPosts)
+
+
+
+const openPost = (_id) =>
+  history.push(`/ebooks/${_id}`)
 
 
 if (!detail.selectedFile) {
@@ -114,19 +128,36 @@ if (!detail.selectedFile) {
             <br/>
             <br/>
             <br/>
-             <Button  className={classes.button} variant="contained" size="large" type="button" ><a  className={classes.a}  href= {`https://wa.me/2348134807598?text=Hello i want to buy ${detail.title} ₦${detail.price}`}>Buy Now<WhatsAppIcon className={classes.whatsapp} /></a></Button>
+             <Button  className={classes.button} variant="contained" color="primary" size="large" type="button" ><a  className={classes.a}  href= {`https://wa.me/2348134807598?text=Hello i want to buy ${detail.title} ₦${detail.price}`}>Buy Now<WhatsAppIcon className={classes.whatsapp} /></a></Button>
              <Link className={classes.back}   to="/ebooks" ><ArrowBackIcon /></Link>
          </Grid>
    
           
         
          </Grid>
-         
         
          <Grid></Grid>
          
        
          </Card> 
+
+          {!!recommendedPosts?.length && (
+        <div className={classes.section}>
+          <Typography gutterBottom variant="h5">You might also like:</Typography>
+          <Divider />
+          <div className={classes.recommendedPosts}>
+            {recommendedPosts?.map(({ title, name, message, likes, selectedFile, _id }) => (
+              <div style={{ cursor: 'pointer' }} onClick={() => openPost(_id)} key={_id}>
+                <Typography gutterBottom variant="h6">{title}</Typography>
+   
+
+                {/* <img src={selectedFile} width="200px" /> */}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+        
         
          {/* <Fullt /> */}
        </div>
