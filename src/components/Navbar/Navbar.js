@@ -4,6 +4,7 @@ import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
 import useStyles from './styles';
 import Nav from './Nav';
+import '../styles.css'
 
 const Navbar = () => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);

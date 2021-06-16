@@ -11,6 +11,8 @@ import { Card, Button, CardContent, CardMedia, Grid, Typography } from "@materia
 import SwipeableTextMobileStepper from "../Slide/SwipeableTextMobileStepper";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Zoom from "react-reveal/Zoom"
+// import Slide from "react-reveal/Slide"
 
 
 // function createBook (book){
@@ -46,24 +48,31 @@ function Home(){
             </div>  */}
         
          <Card  className={classes.card}  >
-         <Slide image = "images\background.png" shop = "Shop Now " title= "HIGHLY TRUSTED ONLINE BOOK STORE" detail = "We sell most valuable digital books. Our books are impactful and educative."/>
-        
+         <Zoom>       <Slide image = "images\background.png" shop = "Shop Now " title= "HIGHLY TRUSTED ONLINE BOOK STORE" detail = "We sell most valuable digital books. Our books are impactful and educative."/>
+         </Zoom>
         <Hr />
+        
         <Grid  className={classes.cardmiddle} >
+        <Zoom >
           <Grid className={classes.container}>
+         
           <Grid  >
           <img src="/images/about.png" className={classes.image} />
           </Grid>
+     
           <Grid className={classes.grid} >
           
             <Typography className={classes.title} variant="h3" gutterbottom >Why Us?</Typography>
             <Typography className={classes.content}  gutterbottom>EminentBooks is 
 Your #1 Online Book Store. We sell life changing ebooks you can ever find. We offer the cheapest ebook online. If you are looking to start a new career or change your career and you are looking for a career book, then you are at the right.</Typography>
           </Grid>
+        
           </Grid>
+          </Zoom>
+
         <div className={classes.hr}><Hr /></div>  
           <Grid className= {classes.mainGrid}  >
-
+         <Zoom>
           <div className= {classes.contain1} >
          <img src="/images/pic-1.png" className={classes.image2} />
           <CardContent className={classes.cardcontent} >
@@ -89,10 +98,11 @@ Your #1 Online Book Store. We sell life changing ebooks you can ever find. We of
           </CardContent>
          </div>
         
-        
+         </Zoom>
     
           </Grid>
           <Grid className={classes.container1}>
+          <Zoom>
           <Grid>
           <img src="/images/course.png" className={classes.image} />
           </Grid>
@@ -103,17 +113,19 @@ Your #1 Online Book Store. We sell life changing ebooks you can ever find. We of
           <Typography className={classes.content}  gutterbottom>EminentBooks offer varieties of books at a relatively cheap price which you cannot find in any other online book store. Start your career today or acquire new skill or knowledge through buying and reading our ebook.</Typography>
           <Link to="/ebooks"><Button className={classes.button}   color="primary"  variant="contained" size="large" type="button">Browse Now</Button></Link>
           </Grid>
+          </Zoom>
           </Grid>
           <div className={classes.hr3}><Hr /></div>
           <div className={classes.hr2}><Hr /></div>
 
-         
+        <Zoom> 
          <SwipeableTextMobileStepper />
-          
+         </Zoom>
          </Grid>
          </Card>
-        
+    <Zoom>   
     <Footer />
+    </Zoom>
 
         </div>
         

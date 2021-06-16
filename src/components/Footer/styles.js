@@ -6,12 +6,12 @@ export default makeStyles((theme) => ({
 
   root:{
     width: "100%",
-    color: "grey"
+    color: "white"
   },
   appBar: {
     boxShadow: 'none',
     borderBottom: '0',
-     background: "grey",
+     background: "#D67086",
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -22,49 +22,88 @@ export default makeStyles((theme) => ({
     marginTop: 100,
     width: "100%",
     position: "relative",
-    top: 130
+    top: 130,
+    color: "white"
 
     },
   col3:{
-    marginLeft: 100,
-    color: "pink"
+    // marginLeft: 100,
+    color: "white",
+    marginLeft: 130,
   }
   ,
   title: {
-   color: "#D67086"
+   color: "white"
   },
   col4:{
-    marginRight: 100,
-    color: "pink"
+    // marginRight: 100,
+    color: "white",
+    marginLeft: 130,
   }
   ,
   Copyright:{
     textAlign: "center",
-    marginTop: 0,
+    marginTop: 40,
     fontStyle: "italic",
-    color: "pink"
+    color: "white"
+  },
+  foot:{
+   display: "flex",
+   flexDirection: "row",
+   marginTop: 40,
+   
+
+  },
+  col1:{
+    width:"25%",
+    marginLeft: "40px"
+
+  },
+  social:{
+    float:"left",
+    marginRight:"4px"
   },
  
     [theme.breakpoints.down('sm')]: {
       foot:{
-       textAlign: "center"
-      }
-      ,
+        display: "grid",
+      
+      
+      },
+      social:{
+        float:"none",
+        marginRight:"20px",
+        position: "relative",
+        marginLeft: 20,
+        
+      },
+      
+      col1:{
+       width: "100%",
+       textAlign: "center",
+       marginLeft: 0
+      },
       col3:{
         marginLeft: 0,
-        width: "100%",
-        color: "pink"
+        textAlign: "center"
+      
       }
       ,
       title: {
        color: "#D67086"
       },
       col4:{
-        marginRight: 0,
-        width: "100%",
-        color: "pink"
+        textAlign: "center",
+        paddingLeft: 0,
+        marginLeft: 0,
+        marginTop: 0,
+       
+       
       }
       ,
+      text:{
+        display:"none"
+      }
     },
 
 }));
