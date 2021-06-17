@@ -63,8 +63,9 @@ export const createPost = (post) => async (dispatch) => {
 
 export const findPost = (id) => async (dispatch) => {
     try {
-     await api.fetchPost(id);
-       dispatch ({type: FIND, payload: id});
+    const {data} = await api.fetchPost(id);
+       dispatch ({type: FIND, payload: data});
+       console.log (data)
     } catch (error) {
         console.log(error)
     }

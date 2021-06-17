@@ -43,7 +43,7 @@ function Footer (props){
                 <Typography>Terms and Condition</Typography>
                     <Typography>Privacy Policy</Typography>
                     <Typography>About</Typography>
-                    <Typography>Ebook</Typography>
+                    <Typography>Ebooks</Typography>
                
             </div>
           

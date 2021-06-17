@@ -12,6 +12,11 @@ export default makeStyles((theme) => ({
    
    
   },
+   pagination: {
+    borderRadius: 4,
+    marginTop: '1rem',
+    padding: '16px',
+  },
   circular:{
     position: "relative",
     top: "100px",

@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 700,
     flexGrow: 1,
     margin:  " 0 auto",
-    marginTop: 100
+    marginTop: 100,
+    borderBottom: 0
     
   },
   header: {

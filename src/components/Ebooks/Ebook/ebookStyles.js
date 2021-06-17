@@ -21,6 +21,8 @@ export default makeStyles({
     borderRadius: '15px',
     height: '100%',
     position: 'relative',
+    backgroundColor:  "#DB8295 ",
+    color: "white"
   },
   overlay: {
     position: 'absolute',
@@ -46,13 +48,13 @@ export default makeStyles({
     padding: '0 16px',
   },
   cardActions: {
-    padding: 3,
+   
     display: 'flex',
     justifyContent: 'center',
-    color: "white",
+    color: "#420606",
 
-    fontWeight: "bold",
-    fontSize: "30px",
+   
+
  
   },
   cardAction: {

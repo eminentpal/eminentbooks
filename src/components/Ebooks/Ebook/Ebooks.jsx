@@ -40,17 +40,17 @@ function Ebook ({book}){
         </div> */}
        
         <div className={classes.details}>
-          <Typography variant="body2" color="textSecondary" component="h2">{`₦${book.price} `}</Typography>
+          <Typography variant="body2" style={{color:"#D74244"}} component="h2">{`₦${book.price} `}</Typography>
         </div>
         <Typography className={classes.title} gutterBottom variant="h5" component="h2">{book.title}</Typography>
-        <CardContent>
+        {/* <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">{book.content.split(' ').splice(0, 20).join(' ')}...</Typography>
-        </CardContent>
+        </CardContent> */}
       </ButtonBase>
       <CardActions className={classes.cardActions}>
-        <Button    >
+        <h2   >
          View
-        </Button>
+        </h2>
       
        
       </CardActions>

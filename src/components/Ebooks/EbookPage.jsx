@@ -102,7 +102,7 @@ const handleDeleteChip = (chipToDelete) => setTags(tags.filter((tag) => tag !==c
      onChange={(e) => setSearch(e.target.value) }
       />
       <Button className={classes.searchicon}  onClick={searchPost} > <SearchIcon   /> </Button>
-   <ChipInput
+   {/* <ChipInput
      value={tags}
      onAdd={(chip) => handleAddChip(chip)}
      onDelete={(chip) => handleDeleteChip(chip)}
@@ -110,7 +110,7 @@ const handleDeleteChip = (chipToDelete) => setTags(tags.filter((tag) => tag !==c
   
    style={{ margin: '10px 0' }}
     />
-    <Button  className={classes.searchicon} onClick={searchPost}  >  <SearchIcon   /> </Button>
+    <Button  className={classes.searchicon} onClick={searchPost}  >  <SearchIcon   /> </Button> */}
   
     
   

@@ -4,7 +4,8 @@ import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
 import useStyles from './styles';
 import Nav from './Nav';
-import '../styles.css'
+import '../styles.css';
+import logo from './logo/logo.png'
 
 const Navbar = () => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
@@ -40,7 +41,7 @@ const Navbar = () => {
         
         <Toolbar>
           <Typography component={Link} to="/" variant="h6" className={classes.title} >
-            <img src="images\background.png" alt="commerce.js" height="25px" className={classes.image} /> EminentBooks
+            <img src={logo} styles={{color:"white"}} alt="logo" height="25px" className={classes.image} /> EminentBooks
           </Typography>
    
             <Nav />

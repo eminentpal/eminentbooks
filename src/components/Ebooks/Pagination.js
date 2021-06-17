@@ -20,6 +20,7 @@ const Paginate = ({ page }) => {
   }, [dispatch, page]);
 
   return (
+    <div className={classes.page}>
     <Pagination
       classes={{ ul: classes.ul }}
       count={numberOfPages}
@@ -30,6 +31,7 @@ const Paginate = ({ page }) => {
         <PaginationItem {...item} component={Link} to={`/posts?page=${item.page}`} />
       )}
     />
+    </div>
   );
 };
 

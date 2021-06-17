@@ -66,15 +66,18 @@ const {data} = await axios.get(`${url}/${id}`)
         // fetchp(id[2]);
 //   const new1 =  dispatch(findPost(id[2]))
 fetchp(id)
+dispatch(findPost(id))
        console.log(match)
       }, [id]); 
 
 
-const {posts} = useSelector(state => state.posts)
+const {post, posts} = useSelector(state => state.posts)
+// const {post} = useSelector(state => state.posts)
 
+console.log (post)
 const recommended= posts?.filter(({_id}) => _id !== detail._id )
 
-const cut = 3
+const cut = 4
 const recommendedPosts = recommended?.slice(0, cut)
 console.log(recommendedPosts)
 
@@ -141,14 +144,31 @@ if (!detail.selectedFile) {
        
          </Card> 
 
+       <Card  className={classes.card2}>
+
+
           {!!recommendedPosts?.length && (
         <div className={classes.section}>
-          <Typography gutterBottom variant="h5">You might also like:</Typography>
-          <Divider />
+           <Divider />
+          <Typography gutterBottom variant="h4">You might also like:</Typography>
+         
           <div className={classes.recommendedPosts}>
             {recommendedPosts?.map(({ title, name, message, likes, selectedFile, _id }) => (
-              <div style={{ cursor: 'pointer' }} onClick={() => openPost(_id)} key={_id}>
-                <Typography gutterBottom variant="h6">{title}</Typography>
+              <div className={classes.grid}  style={{ cursor: 'pointer' }} onClick={() => openPost(_id)} key={_id}>
+                
+                <Grid  >
+                <Grid>
+               <img src = {selectedFile}  className={classes.selectedFile} />
+               </Grid>
+
+                <Grid>
+                <Typography className={classes.typo1} variant="h6">{title}</Typography>
+                </Grid>
+                
+     
+               
+                </Grid>
+                
    
 
                 {/* <img src={selectedFile} width="200px" /> */}
@@ -157,8 +177,9 @@ if (!detail.selectedFile) {
           </div>
         </div>
       )}
-        
-        
+
+
+      </Card>
          {/* <Fullt /> */}
        </div>
    )
