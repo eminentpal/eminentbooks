@@ -30,6 +30,8 @@ export default makeStyles((theme) => ({
     // marginLeft: 100,
     color: "white",
     marginLeft: 130,
+    fontFamily:" cursive",
+    fontSize: 20
   }
   ,
   title: {
@@ -39,6 +41,10 @@ export default makeStyles((theme) => ({
     // marginRight: 100,
     color: "white",
     marginLeft: 130,
+    fontFamily:" cursive",
+    fontSize: 15,
+    content: "contain",
+
   }
   ,
   Copyright:{
@@ -56,12 +62,22 @@ export default makeStyles((theme) => ({
   },
   col1:{
     width:"25%",
-    marginLeft: "40px"
+    marginLeft: "40px",
+    fontFamily:" cursive",
+    fontSize: 20
 
   },
   social:{
     float:"left",
     marginRight:"4px"
+  },
+  text:{
+    fontFamily:" cursive",
+    
+  },
+  text1:{
+    fontFamily:" cursive",
+    
   },
  
     [theme.breakpoints.down('sm')]: {
@@ -90,7 +106,8 @@ export default makeStyles((theme) => ({
       }
       ,
       title: {
-       color: "#D67086"
+       color: "#D67086",
+       display: "block"
       },
       col4:{
         textAlign: "center",

@@ -48,7 +48,7 @@ function Ebook ({book}){
         </CardContent> */}
       </ButtonBase>
       <CardActions className={classes.cardActions}>
-        <h2   >
+        <h2  style={{border: "spx solid white"}} >
          View
         </h2>
       

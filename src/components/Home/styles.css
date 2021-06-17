@@ -9,7 +9,7 @@ h1 {
     color: rgb(219, 118, 180);
     display: inline-block;
     border-bottom-left-radius: 14px;
-    font-family: 'Iceland', cursive;
+    font-family:  cursive;
     font-size: 30px;
   
     
@@ -28,7 +28,7 @@ ul li {
     list-style: none;
     text-decoration: none;
     margin: 30px;
-    font-family: 'Iceland', cursive;
+    font-family:  cursive;
     color: rgb(219, 118, 180);
     background: white;
     padding: 5px;
@@ -50,6 +50,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
    
    
 }

@@ -26,24 +26,24 @@ function Footer (props){
              
                <div className={classes.col1}   >
                <h2>EminentBooks</h2>
-              <Typography >Eminentbooks is an independent online book   store  offering variety of books ranging from inspirational,financial books, career  books,   skill acquisition books.</Typography> 
+              <Typography className={classes.text1} >Eminentbooks is an independent online book   store  offering variety of books ranging from inspirational,financial books, career  books,   skill acquisition books.</Typography> 
                </div>
                <div className={classes.col3}>
                 <h2 className={classes.title} > Contact Us</h2>
                 
-                <Typography>Jos, Nigeria</Typography>
-                    <Typography>mobile: +2348140035918</Typography>
-                    <Typography>email: eminentpal180@gmail.com</Typography>
-                    <Typography>www.eminentbook.com</Typography>
+                <Typography className={classes.text1}>Jos, Nigeria</Typography>
+                    <Typography className={classes.text1} >mobile: +2348140035918</Typography>
+                    <Typography className={classes.text1} >email: eminentpal180@gmail.com</Typography>
+                    <Typography className={classes.text1} >www.eminentbook.com</Typography>
                
             </div>
               <div className={classes.col3}>
                 <h2 className={classes.title} > Useful links</h2>
                 
-                <Typography>Terms and Condition</Typography>
-                    <Typography>Privacy Policy</Typography>
-                    <Typography>About</Typography>
-                    <Typography>Ebooks</Typography>
+                <Typography className={classes.text1} >Terms and Condition</Typography>
+                    <Typography className={classes.text1} >Privacy Policy</Typography>
+                    <Typography className={classes.text1} >About</Typography>
+                    <Typography className={classes.text1} >Ebooks</Typography>
                
             </div>
           
@@ -56,7 +56,7 @@ function Footer (props){
                 <FacebookIcon  className={classes.social} />
                     <Typography className={classes.text} > Facebook</Typography> 
                     <InstagramIcon className={classes.social}  /> 
-                    <Typography className={classes.text} >Instagram</Typography>
+                    <Typography className={classes.text} >Insta</Typography>
                     <YouTubeIcon className={classes.social} />
                     <Typography className={classes.text} >Youtube</Typography>
                     <TwitterIcon className={classes.social} />

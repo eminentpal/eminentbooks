@@ -3,10 +3,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;;
+    /* font-family: 'Lato', sans-serif; */
     height: 0;
     
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
     background-color: #ffffff;
 background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     
@@ -157,7 +157,7 @@ hr {
     text-align: center;
     margin-right: 30px;
     color: rgb(204, 15, 78);
-    font-family: 'Iceland', cursive;
+    /* font-family: 'Iceland', cursive; */
     background-size: cover;
     background-repeat:no-repeat ;
     border-bottom-left-radius: 40px;
@@ -215,7 +215,7 @@ background-image: url("https://www.transparenttextures.com/patterns/skulls.png")
     bottom: 650px;
     border-bottom-right-radius: 100px;
     border-top-left-radius: 100px;
-    font-family: 'Iceland', cursive;
+    /* font-family: 'Iceland', cursive; */
    contain: layout;
 
     
@@ -575,7 +575,7 @@ footer p {
         left: -6px;
         bottom: 220px;
         margin: 0 auto;
-        font-family: 'Iceland', cursive;
+
        display: block !important;
       margin-bottom: 100px;
         

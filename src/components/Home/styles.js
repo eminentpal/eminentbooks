@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
       background: "none",
       marginBottom: 100,
       borderBottom: "0px",
+      
 
       
       
@@ -34,7 +35,7 @@ export default makeStyles((theme) => ({
     title:{
         marginTop: 100,
         marginBottom: 30,
-        
+        fontFamily:" cursive",
     
     }
     ,
@@ -45,6 +46,7 @@ export default makeStyles((theme) => ({
         marginLeft: 200,
         textAlign: "justify",
         textAlign: "right",
+        fontFamily:" cursive",
         
     }
     ,
@@ -52,11 +54,12 @@ export default makeStyles((theme) => ({
         width: "100%",
         textAlign: "left",
         maxWidth: 600,
-        marginRight: 200
+        marginRight: 200,
+       
     },
     content: {
-        
-       
+      fontFamily:" cursive",
+      fontSize: 20
 
     },
 
@@ -65,6 +68,7 @@ export default makeStyles((theme) => ({
     display: " flex",
     justifyContent: " space-between",
     marginTop: 100,
+    
   },
   button:{
     
@@ -75,6 +79,7 @@ export default makeStyles((theme) => ({
     color:"#B1328E",
     fontWeight: "bold",
     marginTop: 60,
+   
   },
     contain1:{
        width: "30%",
@@ -82,6 +87,7 @@ export default makeStyles((theme) => ({
         marginRight: 20,
        textAlign: " center",
        marginBottom: 200,
+     
        
        
 
@@ -129,6 +135,16 @@ export default makeStyles((theme) => ({
         
 
     },
+    content2:{
+      fontFamily:" cursive",
+      fontSize: 20
+    },
+    title2:{
+      fontFamily:" cursive",
+      fontSize: 40,
+      marginBottom: 10
+    },
+    
    [ theme.breakpoints.down("sm")]:{
     image:{
       width: "100%",
@@ -205,7 +221,11 @@ button:{
 
      
   },
-  
+  content: {
+    fontFamily:" cursive",
+    fontSize: 20
+
+  },
 
   image2:{
 display: "inline-block"

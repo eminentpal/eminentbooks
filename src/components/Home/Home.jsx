@@ -87,7 +87,7 @@ Your #1 Online Book Store. We sell life changing ebooks you can ever find. We of
             <Typography  className={classes.title2} variant="h5">Impactful Book</Typography>
             <Typography className={classes.content2}>You can download our ebooks at a go and learn anywhere</Typography>
           </CardContent>
-       <Link to="/ebooks"><Button className={classes.button} color="primary" variant="contained" size="large" type="button">Start Now</Button></Link> 
+       <Link to="/ebooks"><Button className={classes.button}  variant="contained" size="large" type="button">Start Now</Button></Link> 
          </div>
 
          <div className= {classes.contain1} >
@@ -111,7 +111,7 @@ Your #1 Online Book Store. We sell life changing ebooks you can ever find. We of
             <Typography className={classes.title} variant="h3" gutterbottom >Browse our Courses</Typography>
           
           <Typography className={classes.content}  gutterbottom>EminentBooks offer varieties of books at a relatively cheap price which you cannot find in any other online book store. Start your career today or acquire new skill or knowledge through buying and reading our ebook.</Typography>
-          <Link to="/ebooks"><Button className={classes.button}   color="primary"  variant="contained" size="large" type="button">Browse Now</Button></Link>
+          <Link to="/ebooks"><Button className={classes.button}    variant="contained" size="large" type="button">Browse Now</Button></Link>
           </Grid>
           </Zoom>
           </Grid>
