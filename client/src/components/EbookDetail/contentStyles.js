@@ -5,7 +5,8 @@ export default makeStyles((theme)=>({
     card: {
         
         background:"none",
-       boxShadow:"none"
+       boxShadow:"none",
+       marginBottom: 100
         
       },
       content: {
@@ -100,6 +101,36 @@ export default makeStyles((theme)=>({
         marginBottom: theme.spacing(3),
         color:"#DB545A"
       },
+
+      recommendedPosts:{
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        margin: "0 auto",
+        maxWidth: "1200px",
+        textAlign:"center"
+      },
+      card2:{
+        textAlign:"center",
+        background: "pink"
+      },
+      grid:{
+        marginRight: "10px",
+       marginLeft: 10
+      }
+      ,
+      selectedFile :{
+        width:" 100%",
+        maxWidth:300,
+        height: "100%",
+
+        maxHeight: 150,
+        marginTop: 30
+      },
+      typo1:{
+        maxWidth:"310px", 
+      textAlign: "center"
+    },
       [theme.breakpoints.down("sm")]: {
         card: {
         
@@ -161,5 +192,26 @@ export default makeStyles((theme)=>({
          
           
       },
+      recommendedPosts:{
+        display: "block",
+      
+        width: "100%",
+        maxWidth: "300px",
+       margin: "0 auto"
+      },
+
+      card2: {
+        textAlign: "center",
+        background: "pink"
+      },
+      grid:{
+        marginRight: 0,
+        marginBottom: "50px",
+        marginTop: "50px",
+      },
+      typo1:{
+        maxWidth:"100%", 
+      textAlign: "center"
+    },
       },
 }))

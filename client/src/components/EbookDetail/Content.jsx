@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import books from "../../books";
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 import { findPost } from "../../actions/posts";
-import { Button, Card, CardMedia, Grid, Typography } from "@material-ui/core";
+import { Button, Card, Divider, CardMedia, Grid, Typography } from "@material-ui/core";
 import useStyles from "./contentStyles";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -23,16 +23,20 @@ function Content(match) {
     const [content, setContent] = useState(true)
 
    const classes = useStyles()
+  const history = useHistory()
+   const {id} = useParams()
 
-   
-    const url = 'http://localhost:4000/posts';
+   console.log(id)
+
+    const url = 'https://eminentbookserver.herokuapp.com/posts';
         // const id= '60781b17703dcc1e40db2192'
     // fetchPosts = () => axios.get(url);
       const fetchp = async (id)=>{
       
         //   setLoading(true)
+
 const {data} = await axios.get(`${url}/${id}`)
-           console.log(data)
+          //  console.log(data)
            setDetail(data)
       }
 
@@ -58,16 +62,29 @@ const {data} = await axios.get(`${url}/${id}`)
  
       
       useEffect(() =>{
-        const id= window.location.pathname.split("/")
-        fetchp(id[2]);
+        // const id= window.location.pathname.split("/")
+        // fetchp(id[2]);
 //   const new1 =  dispatch(findPost(id[2]))
- 
+fetchp(id)
+dispatch(findPost(id))
        console.log(match)
-      }, [dispatch]); 
+      }, [id]); 
 
 
-      const post = useSelector(state => state.post)
+const {post, posts} = useSelector(state => state.posts)
+// const {post} = useSelector(state => state.posts)
 
+console.log (post)
+const recommended= posts?.filter(({_id}) => _id !== detail._id )
+
+const cut = 4
+const recommendedPosts = recommended?.slice(0, cut)
+console.log(recommendedPosts)
+
+
+
+const openPost = (_id) =>
+  history.push(`/ebooks/${_id}`)
 
 
 if (!detail.selectedFile) {
@@ -114,20 +131,55 @@ if (!detail.selectedFile) {
             <br/>
             <br/>
             <br/>
-             <Button  className={classes.button} variant="contained" size="large" type="button" ><a  className={classes.a}  href= {`https://wa.me/2348134807598?text=Hello i want to buy ${detail.title} ₦${detail.price}`}>Buy Now<WhatsAppIcon className={classes.whatsapp} /></a></Button>
+             <Button  className={classes.button} variant="contained" color="primary" size="large" type="button" ><a  className={classes.a}  href= {`https://wa.me/2348134807598?text=Hello i want to buy ${detail.title} ₦${detail.price}`}>Buy Now<WhatsAppIcon className={classes.whatsapp} /></a></Button>
              <Link className={classes.back}   to="/ebooks" ><ArrowBackIcon /></Link>
          </Grid>
    
           
         
          </Grid>
-         
         
          <Grid></Grid>
          
        
          </Card> 
-        
+
+       <Card  className={classes.card2}>
+
+
+          {!!recommendedPosts?.length && (
+        <div className={classes.section}>
+           <Divider />
+          <Typography gutterBottom variant="h4">You might also like:</Typography>
+         
+          <div className={classes.recommendedPosts}>
+            {recommendedPosts?.map(({ title, name, message, likes, selectedFile, _id }) => (
+              <div className={classes.grid}  style={{ cursor: 'pointer' }} onClick={() => openPost(_id)} key={_id}>
+                
+                <Grid  >
+                <Grid>
+               <img src = {selectedFile}  className={classes.selectedFile} />
+               </Grid>
+
+                <Grid>
+                <Typography className={classes.typo1} variant="h6">{title}</Typography>
+                </Grid>
+                
+     
+               
+                </Grid>
+                
+   
+
+                {/* <img src={selectedFile} width="200px" /> */}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+
+      </Card>
          {/* <Fullt /> */}
        </div>
    )

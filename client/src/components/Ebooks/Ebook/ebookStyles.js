@@ -1,53 +1,64 @@
-import {makeStyles} from "@material-ui/core/styles"
+import { makeStyles } from '@material-ui/core/styles';
 
+export default makeStyles({
+  media: {
+    height: 200,
+    // paddingTop: '56.25%',
+    width: "100%",
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundBlendMode: 'darken',
+  },
+  border: {
+    border: 'solid',
+  },
+  fullHeightCard: {
+    height: '100%',
+  },
+  card: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    borderRadius: '15px',
+    height: '100%',
+    position: 'relative',
+    backgroundColor:  "#DB8295 ",
+    color: "white"
+  },
+  overlay: {
+    position: 'absolute',
+    top: '20px',
+    left: '20px',
+    color: 'blue',
+  },
+  overlay2: {
+    position: 'absolute',
+    top: '20px',
+    right: '20px',
+    color: 'white',
+  },
+  grid: {
+    display: 'flex',
+  },
+  details: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    margin: '20px',
+  },
+  title: {
+    padding: '0 16px',
+  },
+  cardActions: {
+   
+    display: 'flex',
+    justifyContent: 'center',
+    color: "#420606",
 
-export default  makeStyles((theme)=> ({
-    root: {
-        maxWidth: '100%',
-        background:"#f5d7e0",
+   
 
-      },
-      media: {
-        height: 200,
-        width: '100%', // 16:9
-       
-      },
-      cardActions: {
-        display: 'flex',
-        justifyContent: 'flex-end',
-      },
-      cardContent: {
-        display: 'flex',
-        textAlign:'center',
-        
-        justifyContent: 'center',
-      } 
-      ,
-      link:{
-        textOutline:"none",
-        textDecoration:"none",
-        color:"black"
-
-        
-      },
-      pric:{
-        color:"#DB545A"
-      },
-      body:{
-        color:"black",
-      },
-      title:{
-        color:"black",
-      }
-     ,
-      [theme.breakpoints.down("sm")]: {
-        media: {
-          height: 290,
-          width: '100%', // 16:9
-         
-        },
-      }
  
-}) )
-
-//to avoid instant retrun you wrap it inside parentices ({your code here})
+  },
+  cardAction: {
+    display: 'block',
+    textAlign: 'initial',
+  },
+});

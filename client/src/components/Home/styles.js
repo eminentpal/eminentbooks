@@ -5,7 +5,8 @@ export default makeStyles((theme) => ({
       marginTop: 0,
       background: "none",
       marginBottom: 100,
-      borderBottom: "0",
+      borderBottom: "0px",
+
       
       
       
@@ -73,7 +74,7 @@ export default makeStyles((theme) => ({
     background:"white",
     color:"#B1328E",
     fontWeight: "bold",
-    marginTop: 30,
+    marginTop: 60,
   },
     contain1:{
        width: "30%",
