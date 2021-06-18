@@ -18,6 +18,7 @@ const Paginate = ({ page }) => {
       dispatch(getPosts(page));
     }
   }, [dispatch, page]);
+  
 
   return (
     <div className={classes.page}>
@@ -28,6 +29,7 @@ const Paginate = ({ page }) => {
       variant="outlined"
       color="primary"
       renderItem={(item) => (
+       
         <PaginationItem {...item} component={Link} to={`/posts?page=${item.page}`} />
       )}
     />

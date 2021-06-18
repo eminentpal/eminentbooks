@@ -17,10 +17,11 @@ export default makeStyles((theme) => ({
     marginTop: '1rem',
     padding: '16px',
   },
-  circular:{
+  roll:{
     position: "relative",
-    top: "100px",
+    top: "250px",
     left:"50%"
+
   },
   root: {
     flexGrow: 1,

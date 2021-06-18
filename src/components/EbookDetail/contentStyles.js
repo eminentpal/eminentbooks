@@ -129,6 +129,12 @@ export default makeStyles((theme)=>({
         maxHeight: 150,
         marginTop: 30
       },
+      roll:{
+        position: "relative",
+        top: "250px",
+        left:"50%"
+    
+      },
       typo1:{
         maxWidth:"310px", 
       textAlign: "center"

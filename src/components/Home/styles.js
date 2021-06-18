@@ -150,7 +150,8 @@ export default makeStyles((theme) => ({
       width: "100%",
       height:"100",
       maxWidth: 600,
-      
+      margin: "0 auto",
+      textAlign: "center"
   },
 
   
@@ -167,7 +168,7 @@ export default makeStyles((theme) => ({
   title:{
       marginTop: 100,
       marginBottom: 30,
-  
+     textAlign: "center"
   }
   ,
   grid:{
@@ -176,7 +177,7 @@ export default makeStyles((theme) => ({
       maxWidth: "100%",
       marginLeft: 0,
       textAlign: "justify",
-      textAlign: "right",
+     textAlign: "center"
       
   }
   ,
@@ -187,8 +188,8 @@ export default makeStyles((theme) => ({
       marginRight: 200
   },
   content: {
-      
-     
+  
+    textAlign: "justify",
 
   },
 

@@ -4,7 +4,7 @@ import books from "../../books";
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
 import { findPost } from "../../actions/posts";
-import { Button, Card, Divider, CardMedia, Grid, Typography } from "@material-ui/core";
+import { Button, CircularProgress ,Card, Divider, CardMedia, Grid, Typography } from "@material-ui/core";
 import useStyles from "./contentStyles";
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -89,7 +89,7 @@ const openPost = (_id) =>
 
 if (!detail.selectedFile) {
   return (
-    <h1>Loading...</h1>
+   <CircularProgress  className={classes.roll} />
   )
 }
 

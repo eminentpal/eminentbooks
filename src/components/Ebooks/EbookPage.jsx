@@ -85,7 +85,7 @@ const handleDeleteChip = (chipToDelete) => setTags(tags.filter((tag) => tag !==c
 
 
    return (
-      !posts?.length ? <CircularProgress  /> : ( 
+      !posts?.length ? <CircularProgress  className={classes.roll} /> : ( 
 <main  >
 
    <div className={classes.searchbar} >
