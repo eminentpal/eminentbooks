@@ -23,19 +23,21 @@ export default makeStyles({
     position: 'relative',
     backgroundColor:  "#DB8295 ",
     color: "white",
-    border: "2px solid white"
+    border: "2px solid #420606"
   },
   overlay: {
     position: 'absolute',
     top: '20px',
     left: '20px',
     color: 'blue',
+    fontFamily:" Lato, sans-serif",
   },
   overlay2: {
     position: 'absolute',
     top: '20px',
     right: '20px',
     color: 'white',
+    fontFamily:" Lato, sans-serif",
   },
   grid: {
     display: 'flex',
@@ -44,15 +46,19 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     margin: '20px',
+    fontFamily:" Lato, sans-serif",
   },
   title: {
-    padding: '0 16px',
+  
+    fontFamily:" Lato, sans-serif",
+    textAlign: "center"
   },
   cardActions: {
    
     display: 'flex',
     justifyContent: 'center',
     color: "#420606",
+    fontFamily:" Lato, sans-serif",
 
    
 

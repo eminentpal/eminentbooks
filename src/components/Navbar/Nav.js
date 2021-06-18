@@ -18,7 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from "react-router-dom";
-
+import "./styles.css"
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -161,7 +161,7 @@ export default function Nav() {
           </IconButton>
         </div>
         <Divider />
-         <ul onClick={handleDrawerClose}  >
+         <ol onClick={handleDrawerClose} className="list" >
                
                 <Link to="/">
                 <li  onClick={handleDrawerClose} >Home</li>
@@ -179,7 +179,7 @@ export default function Nav() {
                 </Link>
 
                 
-                </ul>
+                </ol>
       </Drawer>
     </div>
   );

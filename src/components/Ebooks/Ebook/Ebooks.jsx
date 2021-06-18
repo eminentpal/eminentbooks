@@ -48,11 +48,11 @@ function Ebook ({book}){
         </CardContent> */}
       </ButtonBase>
       <CardActions className={classes.cardActions}>
-        <h2  style={{border: "spx solid white"}} >
+    <Link className={classes.cardActions} to= {`/ebooks/${book._id}`}> <h2  style={{border: "spx solid white"}} >
          View
         </h2>
-      
-       
+      </Link>
+     
       </CardActions>
       </Zoom>
     </Card> 

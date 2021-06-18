@@ -30,7 +30,7 @@ export default makeStyles((theme) => ({
     // marginLeft: 100,
     color: "white",
     marginLeft: 130,
-    fontFamily:" cursive",
+    fontFamily:" Lato, sans-serif",
     fontSize: 20
   }
   ,
@@ -41,7 +41,7 @@ export default makeStyles((theme) => ({
     // marginRight: 100,
     color: "white",
     marginLeft: 130,
-    fontFamily:" cursive",
+    fontFamily:" Lato, sans-serif",
     fontSize: 15,
     content: "contain",
 
@@ -63,7 +63,7 @@ export default makeStyles((theme) => ({
   col1:{
     width:"25%",
     marginLeft: "40px",
-    fontFamily:" cursive",
+    fontFamily:" Lato, sans-serif",
     fontSize: 20
 
   },
@@ -72,11 +72,11 @@ export default makeStyles((theme) => ({
     marginRight:"4px"
   },
   text:{
-    fontFamily:" cursive",
+    fontFamily:" Lato, sans-serif",
     
   },
   text1:{
-    fontFamily:" cursive",
+    fontFamily:" Lato, sans-serif",
     
   },
  

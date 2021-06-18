@@ -5,7 +5,10 @@ export default makeStyles((theme) => ({
     // display:"flex",
     // flexDirection: "row",
     justifyContent: 'space-around',
- 
+   
+  },
+  li:{
+    margin: 70
   },
  
   [theme.breakpoints.down("sm")]:{
@@ -13,7 +16,11 @@ export default makeStyles((theme) => ({
       width:"100%",
       margin: "0 auto",
       maxWidth: "300px"
+      
   
+    },
+    li:{
+      marginLeft: 20
     },
   }
 }));

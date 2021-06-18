@@ -108,7 +108,9 @@ export default makeStyles((theme)=>({
         width: "100%",
         margin: "0 auto",
         maxWidth: "1200px",
-        textAlign:"center"
+        textAlign:"center",
+        fontFamily:" Lato, sans-serif",
+        color:"white"
       },
       card2:{
         textAlign:"center",
@@ -130,6 +132,10 @@ export default makeStyles((theme)=>({
       typo1:{
         maxWidth:"310px", 
       textAlign: "center"
+    },
+    section:{
+      fontFamily:" Lato, sans-serif",
+      color:"#420606"
     },
       [theme.breakpoints.down("sm")]: {
         card: {

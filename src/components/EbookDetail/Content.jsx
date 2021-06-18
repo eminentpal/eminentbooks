@@ -150,7 +150,7 @@ if (!detail.selectedFile) {
           {!!recommendedPosts?.length && (
         <div className={classes.section}>
            <Divider />
-          <Typography gutterBottom variant="h4">You might also like:</Typography>
+          <h1   >You might also like:</h1>
          
           <div className={classes.recommendedPosts}>
             {recommendedPosts?.map(({ title, name, message, likes, selectedFile, _id }) => (

@@ -35,7 +35,7 @@ export default makeStyles((theme) => ({
     title:{
         marginTop: 100,
         marginBottom: 30,
-        fontFamily:" cursive",
+        fontFamily:" Lato, sans-serif",
     
     }
     ,
@@ -46,7 +46,7 @@ export default makeStyles((theme) => ({
         marginLeft: 200,
         textAlign: "justify",
         textAlign: "right",
-        fontFamily:" cursive",
+        fontFamily:" Lato, sans-serif",
         
     }
     ,
@@ -58,7 +58,7 @@ export default makeStyles((theme) => ({
        
     },
     content: {
-      fontFamily:" cursive",
+      fontFamily:" Lato, sans-serif",
       fontSize: 20
 
     },
@@ -136,11 +136,11 @@ export default makeStyles((theme) => ({
 
     },
     content2:{
-      fontFamily:" cursive",
+      fontFamily:" Lato, sans-serif",
       fontSize: 20
     },
     title2:{
-      fontFamily:" cursive",
+      fontFamily:" Lato, sans-serif",
       fontSize: 40,
       marginBottom: 10
     },
@@ -222,7 +222,7 @@ button:{
      
   },
   content: {
-    fontFamily:" cursive",
+    fontFamily:" Lato, sans-serif",
     fontSize: 20
 
   },
